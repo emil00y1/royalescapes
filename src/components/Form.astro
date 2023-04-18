@@ -1,17 +1,49 @@
 <div>
 <form action="/action_page.php" class="form">
-    <label for="fname">Fornavn</label><br>
-    <input type="text" id="fname" name="fname"><br>
-    <label for="lname">Efternavn</label><br>
-    <input type="text" id="lname" name="lname"><br>
-    <label for="lname">Del din oplevelse her</label><br>
-    <input type="text" id="testamonial" name="testamonial"><br><br>
+    <label for="lname" id="deldin">Del din oplevelse her</label><br><br>
+    <input type="text" id="fname" value="Fornavn" name="fname"><br><br>
+    <input type="text" id="lname" value="Efternavn" name="lname"><br><br>
+    <input type="text" id="testamonial" value="Del din oplevelse her" name="testamonial" class="texttest"><br><br>
     <input type="submit" value="Submit">
   </form>
 </div>
 
   <style>
+
+@font-face {
+            font-family: 'Barrio';
+            src: url('/Barrio-Regular.ttf');
+     }
+
+     #deldin {
+        font-family: Barrio;
+     }
 div {
     text-align: center;
 }
+label {
+    color: #D1B192;
+    background-color: ;
+}
+
+input {
+    color: #D1B192;
+    text-align: center;
+    background-color: #201E1E;
+    border: 2px solid #D1B192;
+    border-radius: 4px;
+
+}
+
+.texttest {
+    width: 35%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #D1B192;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
   </style>
