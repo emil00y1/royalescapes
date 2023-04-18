@@ -1,4 +1,4 @@
-# Velkommen til vores skoleprojekt til Royal Escapes
+# Velkommen til vores skole projekt til Royal Escapes
 
 ## 🧞 Commands
 
