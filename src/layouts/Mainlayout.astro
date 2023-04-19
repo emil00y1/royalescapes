@@ -4,30 +4,31 @@ import Form from "../components/Form.astro";
 import Header from "../components/Header.astro";
 import Playroom from "../components/Playroom.astro";
 import Testamonials from "../components/Testamonials.astro";
+import Lysetimorket from "../components/Lysetimorket.astro";
 ---
 
-
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header/>
-        <slot />
-        <Playroom/>
-        <Testamonials/>
-        <Form/>
-        <Footer/>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Barrio" />
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Playroom />
+    <Lysetimorket />
+    <Testamonials />
+    <Form />
+    <Footer />
+  </body>
 </html>
 
 <style>
-    body {
-        background-color: #201E1E;
-    }
+  body {
+    background-color: #201e1e;
+  }
 </style>
