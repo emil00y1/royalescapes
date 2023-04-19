@@ -1,8 +1,8 @@
 <div>
   <form action="/action_page.php" class="form">
     <label for="lname" id="deldin">Del din oplevelse her</label><br /><br />
-    <input type="text" id="fname" placeholder="Fornavn" name="fname" /><br /><br />
-    <input type="text" id="lname" placeholder="Efternavn" name="lname" /><br /><br />
+    <input type="text" id="fname" placeholder="Fornavn" name="fname" class="fornavn" /><br /><br />
+    <input type="text" id="lname" placeholder="Efternavn" name="lname" class="efternavn" /><br /><br />
     <input type="text" id="testamonial" placeholder="Del din oplevelse her" name="testamonial" class="texttest" /><br /><br />
     <button type="submit"> Submit</button>
   </form>
@@ -12,6 +12,11 @@
   @font-face {
     font-family: "Barrio";
     src: url("/Barrio-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Dosis";
+    src: url("/Dosis-VariableFont_wght.ttf");
   }
 
   #deldin {
@@ -37,8 +42,23 @@
     color: #d1b192;
   }
 
+  .fornavn{
+    width: 30%;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+
+  .efternavn{
+    width: 30%;
+    height: 35px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 16px;
+  }
   .texttest {
-    width: 35%;
+    width: 30%;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -55,5 +75,6 @@
     border-radius: 30px;
     padding: 10px 30px 10px 30px;
     cursor: pointer;
+    font-family: Dosis;
   }
 </style>
