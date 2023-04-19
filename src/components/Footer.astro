@@ -1,112 +1,99 @@
-
-
-
 <div class="footerlayout">
-<div class="col_1">  
+  <div class="col_1">
+    <a href="https://royalescapes.dk/">Royal Escapes</a>
+    <a href="https://royalescapes.dk/dk/om-royal-escapes">Om Os</a>
+    <a href="https://royalescapes.dk/dk/kontakt-royal-escapes">Kontakt os</a>
 
+    <p>&copy; Royal Escapes 2021</p>
+  </div>
 
-<a href="https://royalescapes.dk/">Royal Escapes</a>
-<a href="https://royalescapes.dk/dk/om-royal-escapes">Om Os</a>
-<a href="https://royalescapes.dk/dk/kontakt-royal-escapes">Kontakt os</a>
+  <div class="col_2">
+    <h3>Nyhedsbrev</h3>
+    <form>
+      <input type="email" placeholder="skriv din e-mail her" />
+      <br />
+      <button type="submit"> Tilmeld dig nu</button>
+    </form>
+  </div>
 
-<p>&copy; Royal Escapes 2021</p>
-
+  <div class="some">
+    <ul class="some_icons">
+      <a href="https://www.facebook.com/royalescapescph"><img src="/facebook1-svgrepo-com.svg" width="55px" height="55px" /></a>
+      <a href="https://www.instagram.com/royalescapescph/"><img src="/instagram1-svgrepo-com.svg" width="55px" height="55px" /></a>
+      <a href="#"><img src="/tiktok1-svgrepo-com.svg" width="55px" height="55px" /></a>
+    </ul>
+  </div>
 </div>
-
-<div class="col_2">
-<h3> Nyhedsbrev</h3>
-<form >
-<input type="email" placeholder="skriv din e-mail her"> 
-<br>
-<button type="submit"> Tilmeld dig nu</button>
-</form>
-</div>
-
-<div class="some">
-<ul class="some_icons">
-    <a href="https://www.facebook.com/royalescapescph"><img src="/facebook-svgrepo-com.svg" width="55px" height="55px"></a>
-    <a href="https://www.instagram.com/royalescapescph/"><img src="/instagram-svgrepo-com.svg" width="55px" height="55px"> </a>
-    <a href="#"><img src="/tiktok-svgrepo-com.svg" width="55px" height="55px"></a>
-</ul>
-
-</div>
-
-</div>
-
 
 <style>
-@font-face {
-            font-family: 'Barrio';
-            src: url('/Barrio-Regular.ttf');
-     }
-   @font-face {
+  @font-face {
+    font-family: "Barrio";
+    src: url("/Barrio-Regular.ttf");
+  }
+  @font-face {
     font-family: "Dosis";
     src: url("/Dosis-VariableFont_wght.ttf");
   }
 
-.footerlayout {
-background-color: #7C1A13;
-color: #D1B192;   
-display: flex;
-width: 100%;
-padding: 20px 0px 20px 0px
+  .footerlayout {
+    background-color: #7c1a13;
+    color: #d1b192;
+    display: flex;
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+  }
 
-    }
+  .col_1 a {
+    display: block;
+    text-decoration: none;
+    color: #d1b192;
+    text-align: left;
+    padding-left: 20px;
+  }
 
+  p {
+    padding-left: 20px;
+  }
+  .col_2 {
+    flex-grow: 2;
+    text-align: center;
+    align-content: center;
+  }
 
-   
-  
+  form input {
+    width: 280px;
+    height: 35px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    outline: none;
+    border: none;
+  }
 
-
-    .col_1 a{
-      display: block;
-text-decoration: none;
-color: #D1B192;;
-text-align: left;
-    }
-    .col_2{
-      flex-grow: 2;
-      text-align: center;
-    }
-
-    form input{
-      width: 280px;
-      height: 35px;
-      border-radius: 4px;
-      text-align: center;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      outline: none;
-      border: none;
-    }
-
-    form button{
-      background: transparent;
-      border: 2px solid #D1B192;
-      color: #D1B192;
-      border-radius: 30px;
-      padding: 10px 30px 10px 30px;
-      cursor: pointer;
-      font-family: Dosis;
-    }
-.some {
+  form button {
+    background: transparent;
+    border: 2px solid #d1b192;
+    color: #d1b192;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    font-family: Dosis;
+  }
+  .some {
     display: flex;
     justify-content: space-between;
-}
+  }
 
-.some_icons {
+  .some_icons {
     display: flex;
     gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 30px 30px 0px 0px;
-    
-  
   }
 
   ul {
     list-style-type: none;
     font-family: Barrio;
   }
-
-
 </style>
