@@ -18,13 +18,19 @@ import Videosection from "../components/Videosection.astro";
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Barrio" />
   </head>
   <body>
-    <Header />
-    <slot />
-    <Playroom />
-    <Lysetimorket />
-    <Testamonials />
-    <Form />
-    <Footer />
+    <header>
+      <Header />
+    </header>
+    <main>
+      <slot />
+      <Playroom />
+      <Lysetimorket />
+      <Testamonials />
+      <Form />
+    </main>
+    <footer>
+      <Footer />
+    </footer>
   </body>
 </html>
 
