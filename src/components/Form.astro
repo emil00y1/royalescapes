@@ -1,53 +1,59 @@
 <div>
-<form action="/action_page.php" class="form">
-    <label for="lname" id="deldin">Del din oplevelse her</label><br><br>
-    <input type="text" id="fname" placeholder="Fornavn" name="fname"><br><br>
-    <input type="text" id="lname" placeholder="Efternavn" name="lname"><br><br>
-    <input type="text" id="testamonial" placeholder="Del din oplevelse her" name="testamonial" class="texttest"><br><br>
-    <input type="submit" value="Submit" class="knap">
+  <form action="/action_page.php" class="form">
+    <label for="lname" id="deldin">Del din oplevelse her</label><br /><br />
+    <input type="text" id="fname" placeholder="Fornavn" name="fname" /><br /><br />
+    <input type="text" id="lname" placeholder="Efternavn" name="lname" /><br /><br />
+    <input type="text" id="testamonial" placeholder="Del din oplevelse her" name="testamonial" class="texttest" /><br /><br />
+    <button type="submit"> Submit</button>
   </form>
 </div>
 
-  <style>
+<style>
+  @font-face {
+    font-family: "Barrio";
+    src: url("/Barrio-Regular.ttf");
+  }
 
-@font-face {
-            font-family: 'Barrio';
-            src: url('/Barrio-Regular.ttf');
-     }
-
-#deldin {
-font-family: Barrio;
-        
-     }
-div {
+  #deldin {
+    font-family: Barrio;
+  }
+  div {
     text-align: center;
-}
-label {
-    color: #D1B192;
+  }
+  label {
+    color: #d1b192;
     background-color: ;
-}
+  }
 
-input {
-    color: #D1B192;
+  input {
+    color: #d1b192;
     text-align: center;
-    background-color: #201E1E;
-    border: 2px solid #D1B192;
+    background-color: #201e1e;
+    border: 2px solid #d1b192;
     border-radius: 4px;
+  }
 
-}
+  input::placeholder {
+    color: #d1b192;
+  }
 
-.texttest {
+  .texttest {
     width: 35%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: 2px solid #D1B192;
-  border-radius: 4px;
-  font-size: 16px;
-  resize: none;
-}
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #d1b192;
+    border-radius: 4px;
+    font-size: 16px;
+    resize: none;
+  }
 
-.knap
-
-
-  </style>
+  form button {
+    background: transparent;
+    border: 2px solid #d1b192;
+    color: #d1b192;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+  }
+</style>
