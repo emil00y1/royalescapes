@@ -2,21 +2,33 @@
 
 
 <div class="footerlayout">
-<div>  
-<ul>
-<li>Bla</li>
-<li>blabla</li>
-<li>blabada</li>
-</ul>
+<div class="col_1">  
+
+
+<a href="https://royalescapes.dk/">Royal Escapes</a>
+<a href="https://royalescapes.dk/dk/om-royal-escapes">Om Os</a>
+<a href="https://royalescapes.dk/dk/kontakt-royal-escapes">Kontakt os</a>
+
+<p>&copy; Royal Escapes 2021</p>
+
+</div>
+
+<div class="col_2">
+<h3> Nyhedsbrev</h3>
+<form >
+<input type="email" placeholder="skriv din e-mail her"> 
+<br>
+<button type="submit"> Tilmeld dig nu</button>
+</form>
 </div>
 
 <div class="some">
 <ul class="some_icons">
-    <img src="/facebook-svgrepo-com.svg" width="55px">
-    <img src="/instagram-svgrepo-com.svg" width="55px">
-    <img src="/tiktok-svgrepo-com.svg" width="55px">
+    <img src="/facebook-svgrepo-com.svg" width="55px" height="55px">
+    <img src="/instagram-svgrepo-com.svg" width="55px" height="55px"> 
+    <img src="/tiktok-svgrepo-com.svg" width="55px" height="55px">
 </ul>
-<i class="fa fa-copyright" style="font-size:24px"></i>
+
 </div>
 
 </div>
@@ -30,20 +42,61 @@
 
 .footerlayout {
 background-color: #7C1A13;
-color: bisque;   
-display: grid;
-grid-template-columns: 1fr 1fr;
+color: #D1B192;   
+display: flex;
+width: 100%;
+padding: 20px 0px 20px 0px
+
     }
 
+
+    div{
+      
+    }
+
+
+    .col_1 a{
+      display: block;
+text-decoration: none;
+color: #D1B192;;
+text-align: left;
+    }
+    .col_2{
+      flex-grow: 2;
+      text-align: center;
+    }
+
+    form input{
+      width: 280px;
+      height: 35px;
+      border-radius: 4px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      outline: none;
+      border: none;
+    }
+
+    form button{
+      background: transparent;
+      border: 2px solid #D1B192;
+      color: #D1B192;
+      border-radius: 30px;
+      padding: 10px 30px 10px 30px;
+      cursor: pointer;
+
+    }
 .some {
     display: flex;
     justify-content: space-between;
 }
 
 .some_icons {
-    display: grid;
+    display: flex;
     gap: 2px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+  
   }
 
   ul {
