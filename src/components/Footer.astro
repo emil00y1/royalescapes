@@ -12,7 +12,7 @@
   <div class="col_2">
     <h3>Nyhedsbrev</h3>
     <form>
-      <input type="email" placeholder="skriv din e-mail her" />
+      <input type="email" placeholder="Skriv din email her" />
       <br />
       <button type="submit"> Tilmeld dig nu</button>
     </form>
@@ -20,9 +20,13 @@
 
   <div class="some">
     <ul class="some_icons">
-      <a href="https://www.facebook.com/royalescapescph"><img src="/facebook1-svgrepo-com.svg" width="55px" height="55px" /></a>
-      <a href="https://www.instagram.com/royalescapescph/"><img src="/instagram1-svgrepo-com.svg" width="55px" height="55px" /></a>
-      <a href="#"><img src="/tiktok1-svgrepo-com.svg" width="55px" height="55px" /></a>
+      <a href="https://www.facebook.com/royalescapescph"
+        ><img src="/facebook1-svgrepo-com.svg" /></a
+      >
+      <a href="https://www.instagram.com/royalescapescph/"
+        ><img src="/instagram1-svgrepo-com.svg" /></a
+      >
+      <a href="#"><img src="/tiktok1-svgrepo-com.svg" /></a>
     </ul>
   </div>
 </div>
@@ -42,21 +46,20 @@
     color: #d1b192;
     display: flex;
     width: 100%;
-    padding: 20px 0px 20px 0px;
+    padding: 30px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
   }
 
   .col_1 a {
     display: block;
     text-decoration: none;
     color: #d1b192;
-    text-align: left;
-    padding-left: 20px;
     font-family: Dosis;
     font-size: 16px;
   }
 
   p {
-    padding-left: 20px;
     font-family: dosis;
     font-size: 16px;
   }
@@ -66,23 +69,28 @@
     margin: 0px;
   }
   .col_2 {
-    display: block;
-    flex-grow: 2;
-    text-align: center;
-    align-content: center;
-    margin: auto;
-    padding: 0px 0px 0px 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   form input {
     width: 280px;
     height: 35px;
-    border-radius: 4px;
+    border-radius: 16px;
     text-align: center;
     margin-top: 20px;
-    margin-bottom: 20px;
-    outline: none;
-    border: none;
+    border: solid 2px #d1b192;
+    background-color: #7c1a13;
+    color: #d1b192;
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   form button {
@@ -91,19 +99,31 @@
     color: #d1b192;
     border-radius: 30px;
     padding: 10px 30px 10px 30px;
-    cursor: pointer;
     font-family: Dosis;
+    cursor: pointer;
+    font-size: 1.1rem;
   }
+
+  form button:hover {
+    transform: scale(1.04);
+    transition: 0.2s ease-in-out;
+    background-color: #d1b192;
+    color: #7c1a13;
+  }
+
   .some {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: end;
   }
 
   .some_icons {
-    display: flex;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 41px 30px 0px 0px;
+    padding: 0;
+  }
+
+  .some_icons img {
+    aspect-ratio: 1/1;
+    width: 50px;
   }
 
   ul {
