@@ -1,0 +1,47 @@
+---
+const { text, type, href } = Astro.props;
+---
+
+<a class={type} href={href}>{text}</a>
+
+<style>
+  .buttonblack {
+    display: block;
+    margin: auto;
+    width: 80px;
+    text-align: center;
+    background: transparent;
+    border: 2px solid #d1b192;
+    color: #d1b192;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    font-family: Dosis;
+    text-decoration: none;
+  }
+
+  .buttonblack:hover {
+    transform: scale(1.04);
+    transition: 0.2s ease-in-out;
+    background-color: #d1b192;
+    color: #201e1e;
+  }
+
+  .buttonred {
+    background: transparent;
+    border: 2px solid #d1b192;
+    color: #d1b192;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    font-family: Dosis;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+
+  .buttonred:hover {
+    transform: scale(1.04);
+    transition: 0.2s ease-in-out;
+    background-color: #d1b192;
+    color: #7c1a13;
+  }
+</style>

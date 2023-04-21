@@ -1,10 +1,15 @@
+---
+import Button from "./Button.astro";
+---
+
 <div>
   <form action="/action_page.php" class="form">
     <label for="lname" id="deldin">Del din oplevelse her</label><br /><br />
     <input type="text" id="fname" placeholder="Fornavn" name="fname" class="fornavn" /><br /><br />
     <input type="text" id="lname" placeholder="Efternavn" name="lname" class="efternavn" /><br /><br />
     <input type="text" id="testamonial" placeholder="Del din oplevelse her" name="testamonial" class="texttest" /><br /><br />
-    <button type="submit"> Submit</button>
+    <br />
+    <Button type="buttonblack" href="#" text="Submit" />
   </form>
 </div>
 
@@ -69,7 +74,7 @@
     resize: none;
   }
 
-  form button {
+  /* form button {
     background: transparent;
     border: 2px solid #d1b192;
     color: #d1b192;
@@ -84,5 +89,5 @@
     transition: 0.2s ease-in-out;
     background-color: #d1b192;
     color: #201e1e;
-  }
+  } */
 </style>
