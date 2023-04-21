@@ -7,16 +7,13 @@ import Testimonials from "../components/Testimonials.astro";
 import Lysetimorket from "../components/Lysetimorket.astro";
 import Videosection from "../components/Videosection.astro";
 
-const data = await fetch(
-  "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?limit=4",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teHVmZWpkbWlyYWN5dGd1eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIwMDU3OTYsImV4cCI6MTk5NzU4MTc5Nn0.a2xL0G56IugeAx-Ewwisrgmgx3nHh1T0MUmKHDuBQC4",
-    },
-  }
-).then((res) => res.json());
+const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?limit=4", {
+  method: "GET",
+  headers: {
+    apikey:
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teHVmZWpkbWlyYWN5dGd1eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIwMDU3OTYsImV4cCI6MTk5NzU4MTc5Nn0.a2xL0G56IugeAx-Ewwisrgmgx3nHh1T0MUmKHDuBQC4",
+  },
+}).then((res) => res.json());
 ---
 
 <!DOCTYPE html>
@@ -32,16 +29,8 @@ const data = await fetch(
   <body>
     <div id="loader">
       <div class="loader">
-        <script
-          src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-        ></script>
-        <lottie-player
-          src="lottiefiles/loading-ikon.json"
-          background="transparent"
-          speed="1"
-          style="width: 100px; height: 100px;"
-          loop
-          autoplay></lottie-player>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <lottie-player src="lottiefiles/loading-ikon.json" background="transparent" speed="1" style="width: 120px; height: 120px;" loop autoplay></lottie-player>
       </div>
     </div>
     <header>
@@ -92,8 +81,8 @@ const data = await fetch(
 
   .loader {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 45%;
+    left: 45%;
   }
 </style>
 
