@@ -3,11 +3,23 @@ import Footer from "../components/Footer.astro";
 import Form from "../components/Form.astro";
 import Header from "../components/Header.astro";
 import Playroom from "../components/Playroom.astro";
-import Testamonials from "../components/Testamonials.astro";
+import Testimonials from "../components/Testimonials.astro";
 import Lysetimorket from "../components/Lysetimorket.astro";
 import Videosection from "../components/Videosection.astro";
+
+const data = await fetch(
+  "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?limit=4",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teHVmZWpkbWlyYWN5dGd1eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIwMDU3OTYsImV4cCI6MTk5NzU4MTc5Nn0.a2xL0G56IugeAx-Ewwisrgmgx3nHh1T0MUmKHDuBQC4",
+    },
+  }
+).then((res) => res.json());
 ---
 
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -25,7 +37,13 @@ import Videosection from "../components/Videosection.astro";
       <slot />
       <Playroom />
       <Lysetimorket />
-      <Testamonials />
+      <div class="testimonial_grid">
+        {
+          data.map((Testimonial) => {
+            return <Testimonials data={Testimonial} />;
+          })
+        }
+      </div>
       <Form />
     </main>
     <footer>
@@ -39,5 +57,13 @@ import Videosection from "../components/Videosection.astro";
     margin: 0;
     padding: 0;
     background-color: #201e1e;
+  }
+
+  .testimonial_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    padding: 25px;
   }
 </style>
