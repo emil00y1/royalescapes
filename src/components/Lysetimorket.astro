@@ -1,3 +1,7 @@
+---
+import Button from "./Button.astro";
+---
+
 <div class="grid1-1">
   <img src="/dukkeskygge.png" alt="dukkeskygge" id="dukkeskygge" width="400px" />
   <div class="playtext">
@@ -9,7 +13,7 @@
       <p>Sammen med dit team skal du løse gåderne og slippe ud af Royal Escapes mest uhyggelige rum</p>
       <p>Kender du det når man kan mærke at nogen kigger på en? Skyggerne er over det hele og der er ingen måde hvorpå man kan vide hvem det er der lurer rundt om hjørnet, hvem der ånder dig i nakken eller hvem der griner</p>
     </div>
-    <button type="button">Book Nu</button>
+    <Button type="buttonblack" href="#" text="Book Nu" />
   </div>
   <div>
     <img src="/images/image00042.jpeg" width="60%" />
@@ -53,22 +57,5 @@
   #dukkeskygge {
     margin-left: -20rem;
     width: 700px;
-  }
-
-  button {
-    background: transparent;
-    border: 2px solid #d1b192;
-    color: #d1b192;
-    border-radius: 30px;
-    padding: 10px 30px 10px 30px;
-    cursor: pointer;
-    font-family: Dosis;
-  }
-
-  button:hover {
-    transform: scale(1.04);
-    transition: 0.2s ease-in-out;
-    background-color: #d1b192;
-    color: #201e1e;
   }
 </style>
