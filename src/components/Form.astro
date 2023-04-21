@@ -3,13 +3,32 @@ import Button from "./Button.astro";
 ---
 
 <div>
-  <form action="/action_page.php" class="form">
+  <form class="form">
     <label for="lname" id="deldin">Del din oplevelse her</label><br /><br />
-    <input type="text" id="fname" placeholder="Fornavn" name="fname" class="fornavn" /><br /><br />
-    <input type="text" id="lname" placeholder="Efternavn" name="lname" class="efternavn" /><br /><br />
-    <input type="text" id="testamonial" placeholder="Del din oplevelse her" name="testamonial" class="texttest" /><br /><br />
+    <input
+      type="text"
+      id="fname"
+      placeholder="Fornavn"
+      name="fname"
+      class="fornavn"
+      required
+    /><br /><br />
+    <input
+      type="text"
+      id="lname"
+      placeholder="Efternavn"
+      name="lname"
+      class="efternavn"
+      required
+    /><br /><br />
+    <textarea
+      id="testimonial"
+      placeholder="Del din oplevelse her"
+      name="testimonial"
+      class="texttest"
+      required></textarea><br /><br />
     <br />
-    <Button type="buttonblack" href="#" text="Submit" />
+    <button class="submit" type="submit">Submit</button>
   </form>
 </div>
 
@@ -24,6 +43,27 @@ import Button from "./Button.astro";
     src: url("/Dosis-VariableFont_wght.ttf");
   }
 
+  .submit {
+    margin: auto;
+    min-width: 80px;
+    background: transparent;
+    border: 2px solid #d1b192;
+    color: #d1b192;
+    border-radius: 30px;
+    padding: 10px 30px 10px 30px;
+    cursor: pointer;
+    font-family: Dosis;
+    text-decoration: none;
+    font-size: 1.15rem;
+  }
+
+  .submit:hover {
+    transform: scale(1.04);
+    transition: 0.2s ease-in-out;
+    background-color: #d1b192;
+    color: #201e1e;
+  }
+
   #deldin {
     font-family: Barrio;
   }
@@ -36,7 +76,8 @@ import Button from "./Button.astro";
     background-color: ;
   }
 
-  input {
+  input,
+  textarea {
     color: #d1b192;
     text-align: center;
     background-color: #201e1e;
@@ -74,3 +115,49 @@ import Button from "./Button.astro";
     resize: none;
   }
 </style>
+
+<script>
+  function addTestimonial(newTestimonial) {
+    //dette er funktionen der putter data i tabbellen i databasen
+
+    const url = "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial";
+    const api =
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teHVmZWpkbWlyYWN5dGd1eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIwMDU3OTYsImV4cCI6MTk5NzU4MTc5Nn0.a2xL0G56IugeAx-Ewwisrgmgx3nHh1T0MUmKHDuBQC4";
+
+    const options = {
+      method: "POST", //post gør at den putter noget i tabellen istedet for at hente
+      headers: {
+        apikey: api,
+        Authorization: "Bearer " + api,
+        "Content-Type": "application/json",
+        Prefer: "return=representation",
+      },
+      body: JSON.stringify(newTestimonial), //laver variablen newTestimonial til json (her er det et objekt med 2 værdier)
+    };
+
+    console.log("options:", options);
+
+    fetch(url, options)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("data:", data);
+        //når dden er færdig med at putte i databasen går den til filen addTestimonialfeedback "/" er for at sikre at den leder i roden
+        window.location.href = "/testimonials/addTestimonialFeedback";
+      });
+  }
+
+  const form = document.querySelector("form");
+  console.log("form.elements", form.elements);
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const obj = {
+      fornavn: form.elements.fname.value,
+      efternavn: form.elements.lname.value,
+      testimonial: form.elements.testimonial.value,
+    };
+
+    addTestimonial(obj);
+  });
+</script>
