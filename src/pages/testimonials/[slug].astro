@@ -1,4 +1,7 @@
 ---
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+
 export async function getStaticPaths() {
   const data = await fetch(
     "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial",
@@ -19,5 +22,69 @@ export async function getStaticPaths() {
   });
 }
 
-const { post } = Astro.props;
+const { myData } = Astro.props;
 ---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{myData.fornavn + " " + myData.efternavn}</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Barrio" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="testimonial_container">
+        <div class="textbox">
+          <p class="citat">
+            "{myData.testimonial}"
+          </p>
+          <p class="name">{"- " + myData.fornavn + " " + myData.efternavn}</p>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #201e1e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    width: 25px;
+    margin: 25px 0px 0px 0px;
+  }
+
+  .testimonial_container {
+    display: flex;
+    justify-content: center;
+  }
+  .textbox {
+    background-image: linear-gradient(140deg, #3c3838, transparent);
+    margin: 5%;
+    border-radius: 20px;
+    color: #d1b192;
+    padding: 0.5rem;
+    max-width: 800px;
+  }
+
+  .name {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .citat {
+    font-style: italic;
+    padding: 20px;
+    font-size: 1.7rem;
+  }
+</style>

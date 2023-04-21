@@ -1,0 +1,71 @@
+---
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Testimonials from "../../components/Testimonials.astro";
+
+const data = await fetch(
+  "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teHVmZWpkbWlyYWN5dGd1eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIwMDU3OTYsImV4cCI6MTk5NzU4MTc5Nn0.a2xL0G56IugeAx-Ewwisrgmgx3nHh1T0MUmKHDuBQC4",
+    },
+  }
+).then((res) => res.json());
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Barrio" />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Læs hvad vores tidligere kunder synes om os</h1>
+      <div class="testimonial_grid">
+        {
+          data.map((Testimonial) => {
+            return <Testimonials data={Testimonial} />;
+          })
+        }
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  @font-face {
+    font-family: "Barrio";
+    src: url("/Barrio-Regular.ttf");
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #201e1e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-family: Barrio;
+    color: #d1b192;
+    text-align: center;
+  }
+
+  .testimonial_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    padding: 25px;
+  }
+</style>

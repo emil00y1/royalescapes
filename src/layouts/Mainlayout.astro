@@ -6,6 +6,7 @@ import Playroom from "../components/Playroom.astro";
 import Testimonials from "../components/Testimonials.astro";
 import Lysetimorket from "../components/Lysetimorket.astro";
 import Videosection from "../components/Videosection.astro";
+import Button from "../components/Button.astro";
 
 const data = await fetch(
   "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?limit=4",
@@ -44,9 +45,7 @@ const data = await fetch(
           autoplay></lottie-player>
       </div>
     </div>
-    <header>
-      <Header />
-    </header>
+    <Header />
     <main>
       <slot />
       <Playroom />
@@ -58,11 +57,16 @@ const data = await fetch(
           })
         }
       </div>
+      <div class="readmore_testimonial">
+        <Button
+          type="buttonblack"
+          href="/testimonials"
+          text="Se alle anmeldelser her"
+        />
+      </div>
       <Form />
     </main>
-    <footer>
-      <Footer />
-    </footer>
+    <Footer />
   </body>
 </html>
 
@@ -71,8 +75,16 @@ const data = await fetch(
     margin: 0;
     padding: 0;
     background-color: #201e1e;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
 
+  .readmore_testimonial {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
   .testimonial_grid {
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -2,34 +2,40 @@
 import Button from "./Button.astro";
 ---
 
-<div class="footerlayout">
-  <div class="col_1">
-    <a href="https://royalescapes.dk/">Royal Escapes</a>
-    <br />
-    <a href="https://royalescapes.dk/dk/om-royal-escapes">Om Os</a>
-    <br />
-    <a href="https://royalescapes.dk/dk/kontakt-royal-escapes">Kontakt os</a>
-
-    <p>&copy; Royal Escapes 2021</p>
-  </div>
-
-  <div class="col_2">
-    <h3>Nyhedsbrev</h3>
-    <form>
-      <input type="email" placeholder="Skriv din email her" />
+<footer>
+  <div class="footerlayout">
+    <div class="col_1">
+      <a href="https://royalescapes.dk/">Royal Escapes</a>
       <br />
-      <Button type="buttonred" href="#" text="Tilmeld dig nu" />
-    </form>
-  </div>
+      <a href="https://royalescapes.dk/dk/om-royal-escapes">Om Os</a>
+      <br />
+      <a href="https://royalescapes.dk/dk/kontakt-royal-escapes">Kontakt os</a>
 
-  <div class="some">
-    <ul class="some_icons">
-      <a href="https://www.facebook.com/royalescapescph"><img src="/facebook1-svgrepo-com.svg" /></a>
-      <a href="https://www.instagram.com/royalescapescph/"><img src="/instagram1-svgrepo-com.svg" /></a>
-      <a href="#"><img src="/tiktok1-svgrepo-com.svg" /></a>
-    </ul>
+      <p>&copy; Royal Escapes 2021</p>
+    </div>
+
+    <div class="col_2">
+      <h3>Nyhedsbrev</h3>
+      <form>
+        <input type="email" placeholder="Skriv din email her" />
+        <br />
+        <Button type="buttonred" href="#" text="Tilmeld dig nu" />
+      </form>
+    </div>
+
+    <div class="some">
+      <ul class="some_icons">
+        <a href="https://www.facebook.com/royalescapescph"
+          ><img src="/facebook1-svgrepo-com.svg" /></a
+        >
+        <a href="https://www.instagram.com/royalescapescph/"
+          ><img src="/instagram1-svgrepo-com.svg" /></a
+        >
+        <a href="#"><img src="/tiktok1-svgrepo-com.svg" /></a>
+      </ul>
+    </div>
   </div>
-</div>
+</footer>
 
 <style>
   @font-face {
@@ -51,6 +57,11 @@ import Button from "./Button.astro";
     justify-content: space-between;
   }
 
+  ::placeholder {
+    color: #d1b192;
+    font-size: 4rem;
+  }
+
   .col_1 a {
     display: block;
     text-decoration: none;
@@ -58,11 +69,13 @@ import Button from "./Button.astro";
     font-family: Dosis;
     font-size: 16px;
     min-width: 160px;
+    margin-left: 1rem;
   }
 
   p {
     font-family: dosis;
     font-size: 16px;
+    margin-left: 1rem;
   }
 
   h3 {
@@ -99,6 +112,7 @@ import Button from "./Button.astro";
     flex-direction: column;
     justify-content: end;
     min-width: 160px;
+    margin-right: 1rem;
   }
 
   .some_icons {
@@ -113,5 +127,8 @@ import Button from "./Button.astro";
   ul {
     list-style-type: none;
     font-family: Barrio;
+  }
+  footer {
+    margin-top: auto;
   }
 </style>
