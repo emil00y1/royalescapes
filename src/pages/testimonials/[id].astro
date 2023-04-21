@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 
   return data.map((testimonial) => {
     return {
-      params: { slug: testimonial.slug },
+      params: { id: testimonial.id },
       props: { myData: testimonial },
     };
   });
@@ -75,12 +75,12 @@ const { myData } = Astro.props;
     border-radius: 20px;
     color: #d1b192;
     padding: 0.5rem;
-    max-width: 800px;
+    width: 800px;
+    text-align: center;
   }
 
   .name {
     font-size: 1.3rem;
-    text-align: center;
   }
   .citat {
     font-style: italic;
