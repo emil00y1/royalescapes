@@ -21,7 +21,8 @@ import Button from "./Button.astro";
   </div>
 </section>
 <section class="playroom">
-  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med strerinlys" />
+  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med strerinlys" class="skeleton" />
+  <img src="/images/queenshadow.webp" alt="dronning skygge" class="shadow" id="shadow" />
   <div>
     <h2>Prøv The Royal Playroom</h2>
     <p>
@@ -29,7 +30,6 @@ import Button from "./Button.astro";
       inventore maxime quas modi. Labore ratione magnam neque, ipsam rem, vel alias officia autem suscipit dolores aliquid accusantium expedita mollitia ex aut numquam voluptatum.
     </p>
   </div>
-  <img src="/dronning9.png" alt="dronning skygge" />
 </section>
 <style>
   h1 {
@@ -83,17 +83,22 @@ import Button from "./Button.astro";
 
   .playroom {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 2rem;
   }
 
-  .playroom img {
-    grid-column: 1 / 3;
+  .playroom img.skeleton {
+    grid-column: 1 / 4;
     grid-row: 1 / 3;
+    max-height: 500px;
+  }
+  .playroom img.shadow {
+    grid-column: 6 / 8;
+    grid-row: 1 / 4;
   }
 
   .playroom div {
-    grid-column: 2 / 4;
+    grid-column: 3 / 6;
     grid-row: 2;
   }
 </style>
