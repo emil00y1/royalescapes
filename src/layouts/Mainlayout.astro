@@ -40,57 +40,59 @@ const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testa
       <Playroom />
       <div class="primarybg">
         <Lysetimorket />
-        <div class="testimonial_grid">
-          {
-            data.map((Testimonial) => {
-              return <Testimonials data={Testimonial} />;
-            })
-          }
-        </div>
-        <div class="readmore_testimonial">
-          <Button type="buttonblack" href="/testimonials" text="Se alle anmeldelser her" />
-        </div>
-        <Form />
+        <Videosection>
+          <div class="testimonial_grid">
+            {
+              data.map((Testimonial) => {
+                return <Testimonials data={Testimonial} />;
+              })
+            }
+          </div>
+          <div class="readmore_testimonial">
+            <Button type="buttonblack" href="/testimonials" text="Se alle anmeldelser her" />
+          </div>
+          <Form />
+        </Videosection>
       </div>
+      <Footer />
     </main>
-    <Footer />
   </body>
+
+  <style>
+    .readmore_testimonial {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 4rem;
+    }
+
+    .testimonial_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      text-align: center;
+      padding: 25px;
+    }
+    #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      z-index: 9999;
+    }
+
+    .loader {
+      position: absolute;
+      top: 45%;
+      left: 45%;
+    }
+  </style>
+
+  <script>
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      loader.style.display = "none";
+    });
+  </script>
 </html>
-
-<style>
-  .readmore_testimonial {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4rem;
-  }
-
-  .testimonial_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    text-align: center;
-    padding: 25px;
-  }
-  #loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    z-index: 9999;
-  }
-
-  .loader {
-    position: absolute;
-    top: 45%;
-    left: 45%;
-  }
-</style>
-
-<script>
-  window.addEventListener("load", function () {
-    const loader = document.getElementById("loader");
-    loader.style.display = "none";
-  });
-</script>

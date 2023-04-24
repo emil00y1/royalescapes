@@ -7,15 +7,17 @@ const { text, type, href } = Astro.props;
 <style>
   .buttonblack {
     margin: auto;
-    min-width: 80px;
+    width: fit-content;
     background: transparent;
-    border: 2px solid #d1b192;
+    border: 3px solid #d1b192;
     color: #d1b192;
     border-radius: 30px;
     padding: 10px 30px 10px 30px;
     cursor: pointer;
-    font-family: Dosis;
+    font-family: Barrio;
     text-decoration: none;
+    display: block;
+    font-size: 36px;
   }
 
   .buttonblack:hover {
@@ -27,11 +29,11 @@ const { text, type, href } = Astro.props;
 
   .buttonred {
     background: transparent;
-    border: 2px solid #d1b192;
+    border: 3px solid #d1b192;
     color: #d1b192;
     border-radius: 30px;
     padding: 10px 30px 10px 30px;
-    font-family: Dosis;
+    font-family: Barrio;
     cursor: pointer;
     font-size: 1.1rem;
     text-decoration: none;

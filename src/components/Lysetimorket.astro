@@ -2,60 +2,98 @@
 import Button from "./Button.astro";
 ---
 
-<div class="grid1-1">
+<section class="lyset">
   <img src="/dukkeskygge.png" alt="dukkeskygge" id="dukkeskygge" width="400px" />
   <div class="playtext">
-    <div>
-      <h2>#LysetiMørket</h2>
-    </div>
-    <div>
-      <p>Kan du finde lyset i mørket?</p>
-      <p>Sammen med dit team skal du løse gåderne og slippe ud af Royal Escapes mest uhyggelige rum</p>
-      <p>Kender du det når man kan mærke at nogen kigger på en? Skyggerne er over det hele og der er ingen måde hvorpå man kan vide hvem det er der lurer rundt om hjørnet, hvem der ånder dig i nakken eller hvem der griner</p>
-    </div>
+    <h1># Lyset i Mørket</h1>
+
+    <p>
+      Kan du finde lyset i mørket? <br />
+      Sammen med dit team skal du løse gåderne og slippe ud af <wbr />Royal Escapes mest uhyggelige rum <br />
+      Kender du det når man kan mærke at nogen kigger på en? Skyggerne er over det hele og der er ingen måde hvorpå man kan vide hvem det er der lurer rundt om hjørnet, hvem der ånder dig i nakken eller
+      hvem der griner
+    </p>
+
     <Button type="buttonblack" href="#" text="Book Nu" />
   </div>
   <div>
-    <img src="/images/image00042.jpeg" width="60%" />
+    <img src="/images/shadowknife.jpeg" alt="Skygge af en kniv på blodigt gulv" />
   </div>
-</div>
-
+</section>
+<section class="playroom">
+  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med strerinlys" />
+  <div>
+    <h2>Prøv The Royal Playroom</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia harum natus esse, id sed aspernatur architecto consequatur nihil voluptas quod nemo repudiandae sequi corrupti ipsum cupiditate
+      inventore maxime quas modi. Labore ratione magnam neque, ipsam rem, vel alias officia autem suscipit dolores aliquid accusantium expedita mollitia ex aut numquam voluptatum.
+    </p>
+  </div>
+  <img src="/dronning9.png" alt="dronning skygge" />
+</section>
 <style>
-  @font-face {
-    font-family: "Barrio";
-    src: url("/Barrio-Regular.ttf");
+  h1 {
+    font-family: Barrio;
+    font-size: 64px;
+    color: #d1b192;
   }
-
-  @font-face {
-    font-family: "Dosis";
-    src: url("/Dosis-VariableFont_wght.ttf");
-  }
-
   h2 {
     font-family: Barrio;
+    color: #d1b192;
+    font-size: 54px;
   }
 
-  .grid1-1 {
+  .lyset {
     display: grid;
-    grid-template-columns: 40px 2fr 2fr;
+    grid-template-columns: 3rem 1fr 1fr;
+  }
+
+  .lyset img {
+    padding: 2rem 3rem 2rem 9rem;
+    aspect-ratio: 14/15;
+  }
+
+  p {
+    font-family: "Dosis";
+    color: #d1b192;
+
+    padding-top: 1rem;
   }
 
   .playtext {
     margin: 30px;
-    font-family: "Dosis";
-    color: #d1b192;
-    text-align: center;
-    padding-top: 10%;
   }
 
   img {
-    float: right;
-    padding: 10%;
-    padding-right: 25%;
+    width: 100%;
+    display: block;
+    align-self: stretch;
+    object-fit: cover;
   }
 
   #dukkeskygge {
     margin-left: -20rem;
     width: 700px;
+  }
+  p {
+    margin: 10px 0 30px;
+    line-height: 2rem;
+    font-size: 24px;
+  }
+
+  .playroom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .playroom img {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .playroom div {
+    grid-column: 2 / 4;
+    grid-row: 2;
   }
 </style>

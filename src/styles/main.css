@@ -16,3 +16,13 @@ body {
 .primarybg {
   background-color: #201e1e;
 }
+
+@font-face {
+  font-family: "Barrio";
+  src: url("/Barrio-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url("/Dosis-VariableFont_wght.ttf");
+}
