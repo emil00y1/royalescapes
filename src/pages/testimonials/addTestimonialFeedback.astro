@@ -15,7 +15,13 @@ import Header from "../../components/Header.astro";
   </head>
   <body>
     <Header />
-    <main></main>
+    <main>
+      <h2>Tak for din anmeldelse!</h2>
+      <p>Vi sætter pris på din tid og håber at du har nydt din oplevelse hos Royal Escapes.</p>
+      <p>Vi bestræber os hele tiden på at blive bedre. Derfor er det dejligt at høre vores kunders oplevelser <br /> så vi kan udvikle os fortsætte med at lave gode gåder og gys.</p>
+      <p>Husk også at dele din oplevelse med #lysetimørket på de sociale medier.</p>
+      <img src="/playroomsand.svg" alt="playroomsand" />
+    </main>
     <Footer />
   </body>
 </html>
@@ -28,5 +34,25 @@ import Header from "../../components/Header.astro";
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+  }
+
+  h2 {
+    font-family: Barrio;
+    color: #d1b192;
+    text-align: center;
+  }
+
+  p {
+    color: #d1b192;
+    text-align: center;
+    font-family: Dosis;
+  }
+
+  img {
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
   }
 </style>
