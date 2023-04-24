@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #201e1e;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.primarybg {
+  background-color: #201e1e;
+}

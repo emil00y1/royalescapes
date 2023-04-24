@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials.astro";
 import Lysetimorket from "../components/Lysetimorket.astro";
 import Videosection from "../components/Videosection.astro";
 import Button from "../components/Button.astro";
+import "../styles/main.css";
 
 const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?limit=4", {
   method: "GET",
@@ -18,13 +19,13 @@ const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testa
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Lyset i Mørket</title>
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Barrio" />
   </head>
   <body>
@@ -36,48 +37,31 @@ const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testa
     </div>
     <Header />
     <main>
-      <slot />
       <Playroom />
-      <Lysetimorket />
-      <div class="testimonial_grid">
-        {
-          data.map((Testimonial) => {
-            return <Testimonials data={Testimonial} />;
-          })
-        }
+      <div class="primarybg">
+        <Lysetimorket />
+        <div class="testimonial_grid">
+          {
+            data.map((Testimonial) => {
+              return <Testimonials data={Testimonial} />;
+            })
+          }
+        </div>
+        <div class="readmore_testimonial">
+          <Button type="buttonblack" href="/testimonials" text="Se alle anmeldelser her" />
+        </div>
+        <Form />
       </div>
-      <div class="readmore_testimonial">
-        <Button type="buttonblack" href="/testimonials" text="Se alle anmeldelser her" />
-      </div>
-      <Form />
     </main>
     <Footer />
   </body>
 </html>
 
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: #201e1e;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
   .readmore_testimonial {
     display: flex;
     justify-content: center;
     margin-bottom: 4rem;
-  }
-  header {
-    top: 0;
-    padding-bottom: 270px;
-    background-image: url(blod_utop.svg);
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: ;
   }
 
   .testimonial_grid {

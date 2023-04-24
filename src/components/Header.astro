@@ -1,32 +1,130 @@
-<nav>
-  <ul>
-    <a href=""><li>The Royal Dungeon</li></a>
-    <a href=""><li>The Royal Cabinet</li></a>
-    <a href=""><li>The Royal Playroom</li></a>
-  </ul>
-</nav>
+<header>
+  <div class="logo">
+    <a href="#"><img src="/svg/royalplayroom_logo.svg" alt="logo" /></a>
+  </div>
+  <nav>
+    <ul class="navmenu">
+      <a href=""><li>The Royal Dungeon</li></a>
+      <a href=""><li>The Royal Cabinet</li></a>
+      <a href=""><li>The Royal Playroom</li></a>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</header>
+
 <style>
   @font-face {
     font-family: "Barrio";
     src: url("/Barrio-Regular.ttf");
   }
+
+  header {
+    top: 0;
+    background-color: #7c1a13;
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+  }
   ul {
     list-style-type: none;
-    padding: 3%;
+    padding: 1.8rem;
     margin: 0;
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
   }
+  nav {
+    position: sticky;
+  }
 
   a {
     font-family: Barrio;
     text-decoration: none;
-    color: antiquewhite;
+    color: #d1b192;
     font-size: 1.2rem;
   }
 
   a:hover {
     text-shadow: 3px 3px #201e1e;
+    color: antiquewhite;
+  }
+
+  div.logo {
+    padding-left: 1.8rem;
+    align-self: center;
+  }
+  img {
+    max-height: 40px;
+  }
+  .hamburger {
+    cursor: pointer;
+    display: none;
+  }
+  @media (max-width: 890px) {
+    .bar {
+      display: block;
+      background-color: #d1b192;
+      width: 10px;
+      height: 3px;
+      margin: 15px auto;
+      transition: all 0.3s ease-in-out;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+      border-radius: 10px;
+    }
+    .hamburger {
+      display: block;
+      padding: 0.6rem 1.8rem;
+      align-self: center;
+    }
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(20px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-17px) rotate(-45deg);
+    }
+
+    .navmenu {
+      position: fixed;
+      right: -100%;
+      top: 80px;
+      gap: 6rem;
+      flex-direction: column;
+      padding: 10.6rem 0;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+      z-index: 1;
+      background-color: #7c1a13;
+    }
+    .navmenu.active {
+      right: 0;
+    }
+  }
+  @media (max-width: 450px) {
   }
 </style>
+<script>
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".navmenu");
+
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
+
+  document.querySelectorAll(".navlink").forEach((n) =>
+    n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    })
+  );
+</script>

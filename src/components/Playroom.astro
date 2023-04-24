@@ -1,27 +1,46 @@
 ---
 ---
 
-<div class="section">
-  <img src="/playroomsand.svg" width="500px" id="playroomsvg" />
+<div class="heading">
+  <div class="blood"></div>
+  <section>
+    <video id="background-video" autoplay loop muted poster="/images/image00042.jpeg">
+      <source src="/bg_vid.mp4" type="video/mp4" />
+    </video>
+    <img src="/playroomsand.svg" width="700px" id="playroomsvg" />
+  </section>
 </div>
-
 <style>
   @font-face {
     font-family: "Barrio";
     src: url("/Barrio-Regular.ttf");
   }
-  .section {
-    background-image: url("/images/image00042.jpeg");
-    text-align: center;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-bottom: 80px;
-  }
+  section {
+    display: flex;
 
-  img {
+    justify-content: space-around;
+  }
+  #background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     z-index: -1;
   }
+
   #playroomsvg {
-    margin: 180px;
+    margin-bottom: 190px;
+  }
+  div.blood {
+    padding-bottom: 224px;
+    background-image: url(blod_mtop.svg);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
   }
 </style>
