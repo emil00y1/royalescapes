@@ -3,8 +3,8 @@ import Button from "./Button.astro";
 ---
 
 <div>
+  <h3>Del din oplevelse her</h3>
   <form class="form">
-    <label for="lname" id="deldin">Del din oplevelse her</label><br /><br />
     <input
       type="text"
       id="fname"
@@ -85,8 +85,12 @@ import Button from "./Button.astro";
     border-radius: 4px;
   }
 
-  input::placeholder {
+  h3 {
+    font-family: Barrio;
     color: #d1b192;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    font-size: 1.5rem;
   }
 
   .fornavn {
@@ -95,6 +99,7 @@ import Button from "./Button.astro";
     box-sizing: border-box;
     border-radius: 10px;
     font-size: 16px;
+    font-family: monospace;
   }
 
   .efternavn {
@@ -103,6 +108,7 @@ import Button from "./Button.astro";
     box-sizing: border-box;
     border-radius: 10px;
     font-size: 16px;
+    font-family: Monospace;
   }
   .texttest {
     width: 30%;
