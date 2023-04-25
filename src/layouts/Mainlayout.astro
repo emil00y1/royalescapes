@@ -10,7 +10,7 @@ import Button from "../components/Button.astro";
 import "../styles/main.css";
 
 const data = await fetch(
-  "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?limit=4",
+  "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?order=id.desc&limit=4",
   {
     method: "GET",
     headers: {
@@ -19,6 +19,8 @@ const data = await fetch(
     },
   }
 ).then((res) => res.json());
+
+console.log(data);
 ---
 
 <!DOCTYPE html>
