@@ -24,6 +24,7 @@ const data = await fetch(
       type="image/svg+xml"
       href="/svg/royalplayroom_s_logo.svg"
     />
+    <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
@@ -61,7 +62,7 @@ const data = await fetch(
   }
 
   h1 {
-    font-family: Barrio;
+    font-family: Barrio, sans-serif;
     color: #d1b192;
     text-align: center;
   }
