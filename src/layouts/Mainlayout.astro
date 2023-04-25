@@ -9,19 +9,27 @@ import Videosection from "../components/Videosection.astro";
 import Button from "../components/Button.astro";
 import "../styles/main.css";
 
-const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?limit=4", {
-  method: "GET",
-  headers: {
-    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teHVmZWpkbWlyYWN5dGd1eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIwMDU3OTYsImV4cCI6MTk5NzU4MTc5Nn0.a2xL0G56IugeAx-Ewwisrgmgx3nHh1T0MUmKHDuBQC4",
-  },
-}).then((res) => res.json());
+const data = await fetch(
+  "https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testamonial?limit=4",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5teHVmZWpkbWlyYWN5dGd1eHJuIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODIwMDU3OTYsImV4cCI6MTk5NzU4MTc5Nn0.a2xL0G56IugeAx-Ewwisrgmgx3nHh1T0MUmKHDuBQC4",
+    },
+  }
+).then((res) => res.json());
 ---
 
 <!DOCTYPE html>
 <html lang="da">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/svg/royalplayroom_s_logo.svg"
+    />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Lyset i Mørket</title>
@@ -30,8 +38,16 @@ const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testa
   <body>
     <div id="loader">
       <div class="loader">
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player src="lottiefiles/loading-ikon.json" background="transparent" speed="1" style="width: 120px; height: 120px;" loop autoplay></lottie-player>
+        <script
+          src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
+        ></script>
+        <lottie-player
+          src="lottiefiles/loading-ikon.json"
+          background="transparent"
+          speed="1"
+          style="width: 120px; height: 120px;"
+          loop
+          autoplay></lottie-player>
       </div>
     </div>
     <Header />
@@ -48,7 +64,11 @@ const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testa
           }
         </div>
         <div class="readmore_testimonial">
-          <Button type="buttonblack" href="/testimonials" text="Se alle anmeldelser her" />
+          <Button
+            type="buttonblack"
+            href="/testimonials"
+            text="Se alle anmeldelser her"
+          />
         </div>
         <Form />
       </div>
@@ -63,10 +83,14 @@ const data = await fetch("https://nmxufejdmiracytguxrn.supabase.co/rest/v1/Testa
       margin-bottom: 4rem;
     }
 
+    @media (min-width: 600px) {
+      .testimonial_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
     .testimonial_grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
       text-align: center;
       padding: 25px;
     }
