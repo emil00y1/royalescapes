@@ -9,25 +9,25 @@ import Button from "./Button.astro";
 
     <p>
       Kan du finde lyset i mørket? <br />
-      Sammen med dit bedste team beder vi dig om at løse en række gåder, så I sammen kan hjælpe dronningen med at finde lyset i den mørke tid. Hun er fanget i det royal børneværelse, der har huset mange royal inden hende. På ydersiden virker alt normalt,
-      men træder man dybere ind, gemmer værelset på dunkle og mørke hemmeligheder. <br />
+      Sammen med dit bedste team beder vi dig om at løse en række gåder, så I sammen kan hjælpe dronningen med at finde lyset i den mørke tid. Hun er fanget i det royal børneværelse, der har huset mange
+      royal inden hende. På ydersiden virker alt normalt, men træder man dybere ind, gemmer værelset på dunkle og mørke hemmeligheder. <br />
       Skyggerne har taget over og vi beder jer hjælpe vores dronning med at finde frem til lyset og glæden. Dette kræver mod og styrke. Derfor er det vigtigt at i samarbejder, så tiden ikke løber fra jer.
     </p>
 
     <Button type="buttonblack" href="#" text="Book Nu" />
   </div>
-  <div>
-    <img src="/images/shadowknife.jpeg" alt="Skygge af en kniv på blodigt gulv" />
-  </div>
+
+  <img src="/images/shadowknife.jpeg" alt="Skygge af en kniv på blodigt gulv" class="lysetimg" />
 </section>
 <section class="playroom">
-  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med strerinlys" class="skeleton" />
   <img src="/images/queenshadow.webp" alt="dronning skygge" class="shadow" id="shadow" />
+  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med strerinlys" class="skeleton" />
   <div>
     <h2>Prøv The Royal Playroom</h2>
     <p>
-      For den ultimative oplevelse skal du møde op med dit bedste team, og være klar til at løse en række gåder. Lad distraheringerne blive derhjemme, for dette er en rejse, du ikke vil gå glip af. Vores Game Masters står klar til at hjælpe dig, men
-      tiden løber hurtigt, så vær hurtig på aftrækkeren. I det glamourøse værelse lurer en skummel fortid. Alt du troede, du vidste om den royale familie, kan være forkert. Er du klar på at undslippe på en time? Vi ses på den anden side!
+      For den ultimative oplevelse skal du møde op med dit bedste team, og være klar til at løse en række gåder. Lad distraheringerne blive derhjemme, for dette er en rejse, du ikke vil gå glip af.
+      Vores Game Masters står klar til at hjælpe dig, men tiden løber hurtigt, så vær hurtig på aftrækkeren. I det glamourøse værelse lurer en skummel fortid. Alt du troede, du vidste om den royale
+      familie, kan være forkert. Er du klar på at undslippe på en time? Vi ses på den anden side!
     </p>
   </div>
 </section>
@@ -43,16 +43,6 @@ import Button from "./Button.astro";
     font-size: 54px;
   }
 
-  .lyset {
-    display: grid;
-    grid-template-columns: 3rem 1fr 1fr;
-  }
-
-  .lyset img {
-    padding: 2rem 3rem 2rem 9rem;
-    aspect-ratio: 14/15;
-  }
-
   p {
     font-family: "Dosis";
     color: #d1b192;
@@ -61,7 +51,7 @@ import Button from "./Button.astro";
   }
 
   .playtext {
-    margin: 30px;
+    margin: 30px 0;
   }
 
   img {
@@ -77,32 +67,105 @@ import Button from "./Button.astro";
   }
   p {
     margin: 10px 0 30px;
-    line-height: 2rem;
-    font-size: 24px;
-  }
 
-  .playroom {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .playroom img.skeleton {
-    grid-column: 1 / 4;
-    grid-row: 1 / 3;
-    max-height: 500px;
-  }
-  .playroom img.shadow {
-    grid-column: 6 / 8;
-    grid-row: 1 / 4;
-  }
-
-  .playroom div {
-    grid-column: 3 / 6;
-    grid-row: 2;
+    font-size: 20px;
   }
 
   .dronning {
     grid-column: 3 / 4;
+  }
+
+  @media (max-width: 890px) {
+    .lyset {
+      display: grid;
+      grid-template-columns: 25px 1fr;
+    }
+    .lysetimg {
+      grid-row: 2;
+      grid-column: span 2;
+      padding: 0 25px 3rem 0;
+      aspect-ratio: 2/1;
+    }
+
+    .lyset p {
+      padding-right: 25px;
+    }
+
+    #dukkeskygge {
+      grid-row: 1 / 3;
+    }
+    .playroom {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+
+    .playroom img.skeleton {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      aspect-ratio: 4/3;
+      padding: 0 25px;
+    }
+    .playroom img.shadow {
+      grid-column: 2;
+      grid-row: 1 / 3;
+    }
+
+    .playroom div {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      padding: 0 25px;
+    }
+  }
+
+  @media (min-width: 890px) {
+    .lysetimg {
+      padding: 2rem 3rem 2rem 4rem;
+      aspect-ratio: 14/15;
+    }
+    .lyset {
+      display: grid;
+      grid-template-columns: 25px 3fr 2fr;
+    }
+    p {
+      font-size: 24px;
+      line-height: 2rem;
+    }
+    .playtext {
+      padding-left: 20px;
+    }
+    .playroom {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .playroom img.skeleton {
+      grid-column: 1 / 4;
+      grid-row: 1 / 3;
+      max-height: 500px;
+    }
+    .playroom img.shadow {
+      grid-column: 6 / 8;
+      grid-row: 1 / 4;
+    }
+
+    .playroom div {
+      grid-column: 3 / 6;
+      grid-row: 2;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .playroom img.shadow {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    h2 {
+      font-size: 38px;
+    }
+    h1 {
+      font-size: 48px;
+    }
   }
 </style>
