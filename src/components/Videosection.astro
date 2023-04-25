@@ -5,7 +5,8 @@
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo quod excepturi eligendi rem. Quod, nam? Quas cum esse odit aperiam, error eos unde natus sunt nulla atque delectus alias!
     </p>
   </div>
-  <video src="https://emhb.dk/kea/09_indhold/royalescapestest.mp4" controls autoplay muted width="400px" height="300px"></video>
+
+  <video controls src="https://emhb.dk/kea/09_indhold/royalescapestest.mp4"></video>
 </section>
 
 <style>
@@ -17,13 +18,27 @@
   p {
     font-family: "Dosis";
     color: #d1b192;
-
+    font-size: 24px;
     padding-top: 1rem;
   }
-  section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 0 3rem;
+
+  @media (min-width: 890px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 0 3rem;
+    }
+  }
+
+  /** video  width: 800px;
+    height: 450px; */
+
+  video {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 </style>
+
+<script></script>
