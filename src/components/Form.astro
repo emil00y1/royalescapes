@@ -28,7 +28,9 @@ import Button from "./Button.astro";
       class="texttest"
       required></textarea><br /><br />
     <br />
-    <button class="submit" type="submit">Submit</button>
+    <div>
+      <button class="submit" type="submit">Submit</button>
+    </div>
   </form>
 </div>
 
@@ -68,8 +70,10 @@ import Button from "./Button.astro";
     font-family: Barrio;
   }
   div {
-    text-align: center;
-    padding: 30px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   label {
     color: #d1b192;
@@ -118,15 +122,22 @@ import Button from "./Button.astro";
     resize: none;
   }
 
+  form {
+    max-width: 500px;
+  }
+
   input,
   textarea {
-    width: 350px;
+    width: 100%;
   }
 
   @media (min-width: 600px) {
-    input,
+    /* input,
     textarea {
       width: 500px;
+    } */
+    form {
+      min-width: 400px;
     }
 
     h3 {
