@@ -4,10 +4,16 @@
 <div class="heading">
   <div class="blood"></div>
   <section>
-    <video id="background-video" autoplay loop muted poster="/images/skeleton.jpeg">
+    <video
+      id="background-video"
+      autoplay
+      loop
+      muted
+      poster="/images/skeleton.jpeg"
+    >
       <source src="/bg_vid.mp4" type="video/mp4" />
     </video>
-    <img src="/playroomsand.svg" width="700px" id="playroomsvg" />
+    <img src="/playroomsand.svg" id="playroomsvg" />
   </section>
 </div>
 <style>
@@ -33,8 +39,16 @@
   }
 
   #playroomsvg {
+    width: 700px;
     margin: 0 20px 190px;
   }
+
+  @media (max-width: 600px) {
+    #playroomsvg {
+      width: 310px;
+    }
+  }
+
   div.blood {
     padding-bottom: 224px;
     background-image: url(blod_mtop.svg);

@@ -5,9 +5,28 @@ import Button from "./Button.astro";
 <div>
   <h3>Del din oplevelse her</h3>
   <form class="form">
-    <input type="text" id="fname" placeholder="Fornavn" name="fname" class="fornavn" required /><br /><br />
-    <input type="text" id="lname" placeholder="Efternavn" name="lname" class="efternavn" required /><br /><br />
-    <textarea id="testimonial" placeholder="Del din oplevelse her" name="testimonial" class="texttest" required></textarea><br /><br />
+    <input
+      type="text"
+      id="fname"
+      placeholder="Fornavn"
+      name="fname"
+      class="fornavn"
+      required
+    /><br /><br />
+    <input
+      type="text"
+      id="lname"
+      placeholder="Efternavn"
+      name="lname"
+      class="efternavn"
+      required
+    /><br /><br />
+    <textarea
+      id="testimonial"
+      placeholder="Del din oplevelse her"
+      name="testimonial"
+      class="texttest"
+      required></textarea><br /><br />
     <br />
     <div>
       <button class="submit" type="submit">Submit</button>
@@ -105,6 +124,7 @@ import Button from "./Button.astro";
 
   form {
     max-width: 500px;
+    margin-bottom: 1.5rem;
   }
 
   input,
