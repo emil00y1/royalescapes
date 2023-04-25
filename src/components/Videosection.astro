@@ -16,10 +16,12 @@
   p {
     font-family: "Dosis";
     color: #d1b192;
-    font-size: 24px;
-    padding-top: 1rem;
+    font-size: 20px;
+    padding: 1rem 0 2rem;
   }
-
+  section {
+    padding: 25px;
+  }
   @media (min-width: 890px) {
     section {
       display: grid;
@@ -27,8 +29,15 @@
       gap: 2rem;
       padding: 0 3rem;
     }
+    p {
+      font-size: 24px;
+    }
   }
-
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 38px;
+    }
+  }
   /** video  width: 800px;
     height: 450px; */
 
