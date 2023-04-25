@@ -9,8 +9,8 @@ import Button from "./Button.astro";
 
     <p>
       Kan du finde lyset i mørket? <br />
-      Er du klar på at finde lyset i mørket? Sammen med dit bedste team beder vi dig om at løse en række gåder, så I sammen kan hjælpe dronningen med at finde lyset i den triste og mørke tid. Hun er fanget
-      i det royal børneværelse, der har huset mange royal inden hende. På ydersiden virker alt normalt, men træder man dybere ind, gemmer værelset på dunkle og mørke hemmeligheder. <br />
+      Sammen med dit bedste team beder vi dig om at løse en række gåder, så I sammen kan hjælpe dronningen med at finde lyset i den mørke tid. Hun er fanget i det royal børneværelse, der har huset mange
+      royal inden hende. På ydersiden virker alt normalt, men træder man dybere ind, gemmer værelset på dunkle og mørke hemmeligheder. <br />
       Skyggerne har taget over og vi beder jer hjælpe vores dronning med at finde frem til lyset og glæden. Dette kræver mod og styrke. Derfor er det vigtigt at i samarbejder, så tiden ikke løber fra jer.
     </p>
 
@@ -26,9 +26,9 @@ import Button from "./Button.astro";
   <div>
     <h2>Prøv The Royal Playroom</h2>
     <p>
-      For den ultimative oplevelse skal du møde op med dine bedste medmennesker, og være klar til at løse en række gåder. Lad distraheringerne blive derhjemme, for dette er en rejse, du ikke vil gå
-      glip af. Vores Game Masters står klar til at hjælpe dig, men tiden løber hurtigt, så vær hurtig på aftrækkeren. I det glamourøse værelse lurer en skummel fortid, så alt du troede, du vidste om
-      den royale familie, kan være forkert. Er du klar på at undslippe på en time? Vi ses på den anden side!
+      For den ultimative oplevelse skal du møde op med dit bedste team, og være klar til at løse en række gåder. Lad distraheringerne blive derhjemme, for dette er en rejse, du ikke vil gå glip af.
+      Vores Game Masters står klar til at hjælpe dig, men tiden løber hurtigt, så vær hurtig på aftrækkeren. I det glamourøse værelse lurer en skummel fortid. Alt du troede, du vidste om den royale
+      familie, kan være forkert. Er du klar på at undslippe på en time? Vi ses på den anden side!
     </p>
   </div>
 </section>
@@ -42,11 +42,6 @@ import Button from "./Button.astro";
     font-family: Barrio;
     color: #d1b192;
     font-size: 54px;
-  }
-
-  .lyset {
-    display: grid;
-    grid-template-columns: 3rem 3fr 2fr;
   }
 
   .lyset img {
@@ -78,8 +73,8 @@ import Button from "./Button.astro";
   }
   p {
     margin: 10px 0 30px;
-    line-height: 2rem;
-    font-size: 24px;
+
+    font-size: 20px;
   }
 
   .playroom {
@@ -105,5 +100,16 @@ import Button from "./Button.astro";
 
   .dronning {
     grid-column: 3 / 4;
+  }
+
+  @media (min-width: 890px) {
+    .lyset {
+      display: grid;
+      grid-template-columns: 25px 3fr 2fr;
+    }
+    p {
+      font-size: 24px;
+      line-height: 2rem;
+    }
   }
 </style>
