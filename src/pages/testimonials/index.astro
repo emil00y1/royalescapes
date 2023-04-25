@@ -63,9 +63,21 @@ const data = await fetch(
   }
 
   .testimonial_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     text-align: center;
     padding: 25px;
+  }
+
+  @media (min-width: 600px) {
+    .testimonial_grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+      margin-top: 3rem;
+    }
   }
 </style>
