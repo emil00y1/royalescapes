@@ -10,8 +10,7 @@ import Button from "./Button.astro";
     <p>
       Kan du finde lyset i mørket? <br />
       Sammen med dit team skal du løse gåderne og slippe ud af <wbr />Royal Escapes mest uhyggelige rum <br />
-      Kender du det når man kan mærke at nogen kigger på en? Skyggerne er over det hele og der er ingen måde hvorpå man kan vide hvem det er der lurer rundt om hjørnet, hvem der ånder dig i nakken eller
-      hvem der griner
+      Kender du det når man kan mærke at nogen kigger på en? Skyggerne er over det hele og der er ingen måde hvorpå man kan vide hvem det er der lurer rundt om hjørnet, hvem der ånder dig i nakken eller hvem der griner
     </p>
 
     <Button type="buttonblack" href="#" text="Book Nu" />
@@ -21,15 +20,15 @@ import Button from "./Button.astro";
   </div>
 </section>
 <section class="playroom">
-  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med strerinlys" />
+  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med stearinlys" />
   <div>
     <h2>Prøv The Royal Playroom</h2>
     <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia harum natus esse, id sed aspernatur architecto consequatur nihil voluptas quod nemo repudiandae sequi corrupti ipsum cupiditate
-      inventore maxime quas modi. Labore ratione magnam neque, ipsam rem, vel alias officia autem suscipit dolores aliquid accusantium expedita mollitia ex aut numquam voluptatum.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia harum natus esse, id sed aspernatur architecto consequatur nihil voluptas quod nemo repudiandae sequi corrupti ipsum cupiditate inventore maxime quas modi. Labore ratione magnam
+      neque, ipsam rem, vel alias officia autem suscipit dolores aliquid accusantium expedita mollitia ex aut numquam voluptatum.
     </p>
   </div>
-  <img src="/dronning9.png" alt="dronning skygge" />
+  <img src="/dronning9.png" alt="dronning skygge" class="dronning" />
 </section>
 <style>
   h1 {
@@ -95,5 +94,9 @@ import Button from "./Button.astro";
   .playroom div {
     grid-column: 2 / 4;
     grid-row: 2;
+  }
+
+  .dronning {
+    grid-column: 3 / 4;
   }
 </style>
