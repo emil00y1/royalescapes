@@ -90,11 +90,10 @@ import Button from "./Button.astro";
     color: #d1b192;
     margin-bottom: 1rem;
     font-weight: normal;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .fornavn {
-    width: 30%;
     height: 35px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -103,7 +102,6 @@ import Button from "./Button.astro";
   }
 
   .efternavn {
-    width: 30%;
     height: 35px;
     box-sizing: border-box;
     border-radius: 10px;
@@ -111,7 +109,6 @@ import Button from "./Button.astro";
     font-family: Monospace;
   }
   .texttest {
-    width: 30%;
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
@@ -119,6 +116,22 @@ import Button from "./Button.astro";
     border-radius: 4px;
     font-size: 16px;
     resize: none;
+  }
+
+  input,
+  textarea {
+    width: 350px;
+  }
+
+  @media (min-width: 600px) {
+    input,
+    textarea {
+      width: 500px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
   }
 </style>
 
