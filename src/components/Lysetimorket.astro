@@ -10,7 +10,8 @@ import Button from "./Button.astro";
     <p>
       Kan du finde lyset i mørket? <br />
       Sammen med dit team skal du løse gåderne og slippe ud af <wbr />Royal Escapes mest uhyggelige rum <br />
-      Kender du det når man kan mærke at nogen kigger på en? Skyggerne er over det hele og der er ingen måde hvorpå man kan vide hvem det er der lurer rundt om hjørnet, hvem der ånder dig i nakken eller hvem der griner
+      Kender du det når man kan mærke at nogen kigger på en? Skyggerne er over det hele og der er ingen måde hvorpå man kan vide hvem det er der lurer rundt om hjørnet, hvem der ånder dig i nakken eller
+      hvem der griner
     </p>
 
     <Button type="buttonblack" href="#" text="Book Nu" />
@@ -20,15 +21,15 @@ import Button from "./Button.astro";
   </div>
 </section>
 <section class="playroom">
-  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med stearinlys" />
+  <img src="/images/skeleton.jpeg" alt="Skelet i mørke med strerinlys" class="skeleton" />
+  <img src="/images/queenshadow.webp" alt="dronning skygge" class="shadow" id="shadow" />
   <div>
     <h2>Prøv The Royal Playroom</h2>
     <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia harum natus esse, id sed aspernatur architecto consequatur nihil voluptas quod nemo repudiandae sequi corrupti ipsum cupiditate inventore maxime quas modi. Labore ratione magnam
-      neque, ipsam rem, vel alias officia autem suscipit dolores aliquid accusantium expedita mollitia ex aut numquam voluptatum.
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia harum natus esse, id sed aspernatur architecto consequatur nihil voluptas quod nemo repudiandae sequi corrupti ipsum cupiditate
+      inventore maxime quas modi. Labore ratione magnam neque, ipsam rem, vel alias officia autem suscipit dolores aliquid accusantium expedita mollitia ex aut numquam voluptatum.
     </p>
   </div>
-  <img src="/dronning9.png" alt="dronning skygge" class="dronning" />
 </section>
 <style>
   h1 {
@@ -82,17 +83,22 @@ import Button from "./Button.astro";
 
   .playroom {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 2rem;
   }
 
-  .playroom img {
-    grid-column: 1 / 3;
+  .playroom img.skeleton {
+    grid-column: 1 / 4;
     grid-row: 1 / 3;
+    max-height: 500px;
+  }
+  .playroom img.shadow {
+    grid-column: 6 / 8;
+    grid-row: 1 / 4;
   }
 
   .playroom div {
-    grid-column: 2 / 4;
+    grid-column: 3 / 6;
     grid-row: 2;
   }
 
